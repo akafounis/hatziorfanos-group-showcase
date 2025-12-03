@@ -1,6 +1,7 @@
 import bientePreview from "@/assets/biente-preview.jpg";
 import aperPreview from "@/assets/aper-preview.jpg";
 import astatePreview from "@/assets/astate-preview.jpg";
+import logo from "@/assets/hatziorfanos-logo.png";
 
 const Footer = () => {
   const brandLogos = [
@@ -16,12 +17,11 @@ const Footer = () => {
           {/* Brand & Tagline */}
           <div className="lg:col-span-1">
             <a href="#" className="inline-block mb-6">
-              <span className="font-serif text-2xl font-medium tracking-wide text-cream">
-                HATZIORFANOS
-              </span>
-              <span className="block text-[10px] tracking-[0.3em] uppercase text-cream/60">
-                Group
-              </span>
+              <img 
+                src={logo} 
+                alt="HATZIORFANOS GROUP" 
+                className="h-8 w-auto brightness-0 invert"
+              />
             </a>
             <p className="text-sm text-cream/70 leading-relaxed max-w-xs">
               "Shaping the future of interior solutions through strategic growth, innovation, and premium design excellence."
