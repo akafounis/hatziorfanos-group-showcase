@@ -11,13 +11,13 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 section-container w-full">
+      <div className="relative z-10 section-container w-full text-[#a44343]">
         <div className="max-w-2xl animate-fade-in-up">
           <span className="label-uppercase mb-6 block">Since 1989</span>
           <h1 className="heading-display text-foreground mb-6">
             Welcome to
             <br />
-            <span className="text-accent">HATZIORFANOS</span> Group
+            <span className="font-normal text-primary bg-primary">HATZIORFANOS</span> Group
           </h1>
           <p className="text-body max-w-xl mb-8">
             For over three decades, HATZIORFANOS Group has been a driving force
