@@ -1,9 +1,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const ContactSection = () => {
-  return (
-    <section id="contact" className="section-padding bg-primary text-primary-foreground">
+  return <section id="contact" className="section-padding bg-primary text-primary-foreground">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
@@ -22,16 +20,13 @@ const ContactSection = () => {
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-sm bg-primary-foreground/10 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-gold-light" />
+                  <Mail className="w-5 h-5 text-gold-light text-primary bg-primary-foreground" />
                 </div>
                 <div>
                   <p className="text-xs text-primary-foreground/60 uppercase tracking-wider">
                     Email
                   </p>
-                  <a
-                    href="mailto:info@hatziorfanos.gr"
-                    className="text-primary-foreground hover:text-gold-light transition-colors"
-                  >
+                  <a href="mailto:info@hatziorfanos.gr" className="text-primary-foreground hover:text-gold-light transition-colors">
                     info@hatziorfanos.gr
                   </a>
                 </div>
@@ -45,10 +40,7 @@ const ContactSection = () => {
                   <p className="text-xs text-primary-foreground/60 uppercase tracking-wider">
                     Phone
                   </p>
-                  <a
-                    href="tel:+302101234567"
-                    className="text-primary-foreground hover:text-gold-light transition-colors"
-                  >
+                  <a href="tel:+302101234567" className="text-primary-foreground hover:text-gold-light transition-colors">
                     +30 210 123 4567
                   </a>
                 </div>
@@ -75,69 +67,34 @@ const ContactSection = () => {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2"
-                  >
+                  <label htmlFor="name" className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2">
                     Name
                   </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors"
-                    placeholder="Your name"
-                  />
+                  <input type="text" id="name" className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors" placeholder="Your name" />
                 </div>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2"
-                  >
+                  <label htmlFor="email" className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2">
                     Email
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors"
-                    placeholder="your@email.com"
-                  />
+                  <input type="email" id="email" className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors" placeholder="your@email.com" />
                 </div>
               </div>
 
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2"
-                >
+                <label htmlFor="subject" className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2">
                   Subject
                 </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors"
-                  placeholder="How can we help?"
-                />
+                <input type="text" id="subject" className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors" placeholder="How can we help?" />
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2"
-                >
+                <label htmlFor="message" className="block text-xs uppercase tracking-wider text-primary-foreground/60 mb-2">
                   Message
                 </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors resize-none"
-                  placeholder="Tell us about your project..."
-                />
+                <textarea id="message" rows={4} className="w-full bg-transparent border-b border-primary-foreground/20 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-gold-light focus:outline-none transition-colors resize-none" placeholder="Tell us about your project..." />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gold hover:bg-gold-light text-charcoal tracking-wider uppercase text-xs font-semibold h-12"
-              >
+              <Button type="submit" className="w-full hover:bg-gold-light text-charcoal tracking-wider uppercase text-xs font-semibold h-12 bg-primary-foreground">
                 Send Message
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
@@ -145,8 +102,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
