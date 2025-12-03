@@ -11,7 +11,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 section-container w-full text-[#a44343]">
+      <div className="relative z-10 section-container w-full text-black">
         <div className="max-w-2xl animate-fade-in-up">
           <span className="label-uppercase mb-6 block">Since 1989</span>
           <h1 className="heading-display text-foreground mb-6">
