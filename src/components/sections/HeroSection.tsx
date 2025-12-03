@@ -1,19 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-kitchen.jpg";
-
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Luxury kitchen interior showcasing HATZIORFANOS Group premium design"
-          className="w-full h-full object-cover"
-        />
+        <img alt="Luxury kitchen interior showcasing HATZIORFANOS Group premium design" className="w-full h-full object-cover" src="/lovable-uploads/e066b90c-84e2-462a-8ecc-31f88de73ac7.jpg" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/10" />
       </div>
 
       {/* Content */}
@@ -49,8 +43,6 @@ const HeroSection = () => {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-px h-16 bg-gradient-to-b from-accent to-transparent" />
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
