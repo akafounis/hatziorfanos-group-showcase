@@ -5,7 +5,7 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Luxury kitchen interior showcasing HATZIORFANOS Group premium design" className="w-full h-full object-cover" />
+        
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30" />
       </div>
