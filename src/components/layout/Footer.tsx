@@ -1,176 +1,120 @@
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+import bientePreview from "@/assets/biente-preview.jpg";
+import aperPreview from "@/assets/aper-preview.jpg";
+import astatePreview from "@/assets/astate-preview.jpg";
 
-  const footerLinks = {
-    brands: [
-      { label: "Biente", href: "#biente" },
-      { label: "Àper", href: "#aper" },
-      { label: "A.State", href: "#astate" },
-    ],
-    company: [
-      { label: "About Us", href: "#about" },
-      { label: "Our Journey", href: "#journey" },
-      { label: "Values", href: "#values" },
-      { label: "News", href: "#news" },
-    ],
-    legal: [
-      { label: "Privacy Policy", href: "#privacy" },
-      { label: "Terms of Service", href: "#terms" },
-      { label: "Cookie Policy", href: "#cookies" },
-    ],
-  };
+const Footer = () => {
+  const brandLogos = [
+    { name: "Biente", src: bientePreview, href: "#biente" },
+    { name: "Àper", src: aperPreview, href: "#aper" },
+    { name: "A.State", src: astatePreview, href: "#astate" },
+  ];
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-charcoal text-cream-light">
       <div className="section-container py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <a href="#" className="inline-block mb-4">
-              <span className="font-serif text-xl font-medium tracking-wide text-foreground">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-start">
+          {/* Brand & Tagline */}
+          <div className="lg:col-span-1">
+            <a href="#" className="inline-block mb-6">
+              <span className="font-serif text-2xl font-medium tracking-wide text-cream">
                 HATZIORFANOS
               </span>
-              <span className="block text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
+              <span className="block text-[10px] tracking-[0.3em] uppercase text-cream/60">
                 Group
               </span>
             </a>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Excellence in design and innovation since 1989.
+            <p className="text-sm text-cream/70 leading-relaxed max-w-xs">
+              "Shaping the future of interior solutions through strategic growth, innovation, and premium design excellence."
             </p>
           </div>
 
-          {/* Brands Links */}
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-foreground mb-4">
+          {/* Contact Info */}
+          <div className="lg:col-span-1">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-cream mb-6">
+              Contact
+            </h4>
+            <ul className="space-y-3 text-sm text-cream/70">
+              <li className="flex items-start gap-3">
+                <span className="text-gold">E:</span>
+                <a 
+                  href="mailto:connect@hatziorfanosgroup.gr" 
+                  className="hover:text-gold transition-colors duration-300"
+                >
+                  connect@hatziorfanosgroup.gr
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gold">HQ:</span>
+                <span>Kifisias 186, Chalandri 152 31</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gold">P:</span>
+                <a 
+                  href="tel:+302106747300" 
+                  className="hover:text-gold transition-colors duration-300"
+                >
+                  210 674 7300
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Brand Logos */}
+          <div className="lg:col-span-1">
+            <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-cream mb-6">
               Our Brands
             </h4>
-            <ul className="space-y-2">
-              {footerLinks.brands.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+            <div className="flex items-center gap-6">
+              {brandLogos.map((brand) => (
+                <a
+                  key={brand.name}
+                  href={brand.href}
+                  className="group relative w-16 h-16 rounded-full overflow-hidden border border-cream/20 hover:border-gold transition-all duration-300"
+                  aria-label={brand.name}
+                >
+                  <img
+                    src={brand.src}
+                    alt={brand.name}
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                </a>
               ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-foreground mb-4">
-              Company
-            </h4>
-            <ul className="space-y-2">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.2em] font-medium text-foreground mb-4">
-              Legal
-            </h4>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} HATZIORFANOS Group. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
-              aria-label="Instagram"
+        <div className="pt-10 mt-12 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <a
+            href="#terms"
+            className="text-xs uppercase tracking-[0.15em] text-cream/50 hover:text-gold transition-colors duration-300"
+          >
+            Terms of Use
+          </a>
+          
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cream/50 hover:text-gold transition-colors duration-300"
+            aria-label="LinkedIn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
-              aria-label="LinkedIn"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect width="4" height="12" x="2" y="9" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors duration-300"
-              aria-label="Facebook"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-            </a>
-          </div>
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect width="4" height="12" x="2" y="9" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
