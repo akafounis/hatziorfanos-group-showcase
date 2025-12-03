@@ -5,19 +5,19 @@ const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img alt="Luxury kitchen interior showcasing HATZIORFANOS Group premium design" className="w-full h-full object-cover" src="/lovable-uploads/e066b90c-84e2-462a-8ecc-31f88de73ac7.jpg" />
+        <img src={heroImage} alt="Luxury kitchen interior showcasing HATZIORFANOS Group premium design" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/30" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 section-container w-full text-black">
+      <div className="relative z-10 section-container w-full bg-secondary">
         <div className="max-w-2xl animate-fade-in-up">
           <span className="label-uppercase mb-6 block">Since 1989</span>
           <h1 className="heading-display text-foreground mb-6">
             Welcome to
             <br />
-            <span className="font-normal text-primary bg-primary">HATZIORFANOS</span> Group
+            <span className="text-accent">HATZIORFANOS</span> Group
           </h1>
           <p className="text-body max-w-xl mb-8">
             For over three decades, HATZIORFANOS Group has been a driving force
