@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/hatziorfanos-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,12 +34,11 @@ const Header = () => {
       <div className="section-container flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="relative z-10">
-          <span className="font-serif text-xl md:text-2xl font-medium tracking-wide text-foreground">
-            HATZIORFANOS
-          </span>
-          <span className="block text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
-            Group
-          </span>
+          <img 
+            src={logo} 
+            alt="HATZIORFANOS GROUP" 
+            className="h-6 md:h-8 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}
