@@ -31,7 +31,7 @@ const timelineEvents = [{
   title: "High-End Design",
   description: "Begins representation of Àper and Boffi in Greece."
 }, {
-  year: "2023",
+  year: "2022",
   title: "Real Estate Venture",
   description: "Launches A.State Boutique Real Estate Agency, marking expansion into luxury real estate."
 }, {
